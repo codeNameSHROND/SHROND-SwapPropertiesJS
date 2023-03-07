@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="SHROND" />
+    <meta name="description" content=" SHROND" />
+
+    <title>SHROND - SWAP PROPERTIES</title>
+    <meta content="Author" name="Palalon, Marc Johnford Cagatin" />
+    <!-- 
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href="favicon.png" /> -->
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+      * {
+        font-family: sans-serif;
+        transition: 0.5s ease;
+      }
+      body {
+        background: rgb(241, 241, 241);
+      }
+      main {
+        display: flex;
+        justify-content: space-around;
+      }
+      @media (max-width: 640px) {
+        main {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      fieldset {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .css,
+      .css legend {
+        background: black;
+        color: white;
+      }
+      .css {
+        transform: scale(0);
+      }
+      legend {
+        padding: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.671);
+      }
+
+      button {
+        border: 1px solid grey;
+        cursor: pointer;
+      }
+      .circle-container {
+        padding: 10px;
+        width: 200px;
+        height: 200px;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        row-gap: 20px;
+      }
+      .circle1,
+      .circle2 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at bottom,
+          rgba(255, 255, 1, 0.763) 5%,
+          rgb(226, 158, 0) 20%,
+          rgba(192, 82, 3, 0.264) 60%,
+          rgba(38, 32, 0, 0) 100%
+        );
+        animation: bg-animation 2s linear alternate;
+      }
+      .circle2 {
+        background: radial-gradient(
+          circle at top,
+          rgb(255, 255, 1, 0.763) 5%,
+          rgb(226, 158, 0) 20%,
+          rgba(192, 82, 3, 0.264) 60%,
+          rgba(38, 32, 0, 0) 100%
+        );
+      }
+
+      @keyframes bg-animation {
+        0% {
+          background-color: #a4aa0281;
+        }
+        20% {
+          background-color: #a5750495;
+        }
+        100% {
+          background-color: rgba(158, 18, 2, 0.342) 100%;
+        }
+      }
+      .circle1.update,
+      .circle2.update {
+        background: radial-gradient(
+          circle at center,
+          rgb(230, 88, 6) 10%,
+          rgb(255, 196, 0) 60%,
+          rgb(238, 255, 0) 100%
+        );
+        box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040,
+          0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000,
+          0 0 40px 100px #ffde0010;
+        animation: rise 2s infinite linear forwards, rays 2s infinite linear;
+      }
+      @keyframes rise {
+        0% {
+          box-shadow: none;
+        }
+      }
+      @keyframes rays {
+        0% {
+          box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080,
+            0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010,
+            0 0 40px 100px #ffde0010;
+        }
+        100% {
+          box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040,
+            0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000,
+            0 0 40px 100px #ffde0010;
+        }
+      }
+    </style>
+
+    <!-- <link rel="stylesheet" href="style.css" />
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+    <script src="script.js" type="text/babel"></script> -->
+
+    <script
+      src="https://kit.fontawesome.com/b1fb81a378.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="margin-top: 0">
+    <header style="margin-top: 0">
+      <fieldset style="margin-top: 0">
+        <legend>
+          <a
+            href="https://www.facebook.com/shrond.fb08property/about"
+            class="shrondLogo"
+            rel="noopener noreferrer"
+            target="_blank"
+            style="font-family: 'Orbitron', sans-serif; text-decoration: none"
+          >
+            SHR<i class="fa-solid fa-code"></i>ND
+            <b> Palalon Marc Johnford C.</b>
+          </a>
+        </legend>
+      </fieldset>
+    </header>
+
+    <main>
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+      <fieldset>
+        <legend>Javascript Styling + JS Control</legend>
+        <br />
+        <div class="btns">
+          <button onclick="updateBox('first box');">CHANGE FIRST</button>
+          <button onclick="updateBox('second box');">CHANGE SECOND</button>
+        </div>
+
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </fieldset>
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+      <fieldset class="css">
+        <legend>CSS Styling + Javascript Control</legend>
+        <br />
+        <div class="btns">
+          <button onclick="updateCircle();">SWAP PROPERTIES</button>
+        </div>
+
+        <div class="circle-container"><div class="circle1"></div></div>
+        <div class="circle-container"><div class="circle2"></div></div>
+      </fieldset>
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
